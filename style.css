@@ -1,0 +1,276 @@
+:root {
+
+    /* Content */
+    --content-primary: #FFFFFF;
+    --content-secondary: #C7C9CC;
+    --content-tertiary: #D9D9D9;
+    --content-brand: #C58DE7;
+    --color-inverse: #030203;
+
+    /*Background*/
+    --background-primary: #020202;
+    --background-secondary: #111012;
+    --background-tertiary: #24222E;
+    --background-brand: #c58de7;
+    --background-gray: #3d3d3d;
+
+    /*Accent*/
+    --accent-pink: #D586E0;
+    --accent-brue: #91A1FA;
+    --accent-green: #77c0a7;
+    --accent-lime: #D1DC97;
+    --accent-red: #E9A9B3;
+
+    /*Gradient*/
+    --gradient-border: linear-gradient(90deg, #77C0AF 0%, #5b6430 14.84%, #E9A9B3 32.15%, #D586E0 65.79%, #91A1FA 84.58%);
+    --gradient-background: linear-gradient(90deg, #D586E0 0%, #91A1FA 98.93%);
+    --gradient-content: linear-gradient(90deg, #C7C9CC 0%, #3D3D3D 100%);
+}
+
+* {
+    color: var(--content-primary);
+    font-family: "Sora", serif;
+}
+
+body {
+    background-image: url('img/Shapes.svg'); /* Caminho da imagem */
+    background-size: cover; /* Ajusta para cobrir toda a tela */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita repetição */
+    background-color: var(--background-primary);
+    width: 80%;
+    margin: 0 auto;
+}
+
+.logo-projeto {
+    align-items: center;
+    display: flex;
+    margin-top: 76px;
+    gap: 11px;
+}
+
+.logo-projeto img {
+    width: 38px;
+    height: 38px;
+}
+
+.logo-projeto h3 {
+    font-size: xx-large;
+}
+
+.tytle-login {
+    background: var(--gradient-content); /* Aplica o gradiente */
+    -webkit-background-clip: text; /* Faz o gradiente se aplicar ao texto */
+    -webkit-text-fill-color: transparent; /* Torna o texto transparente para exibir o gradiente */
+    font-family: "Roboto", serif;
+    font-weight: 700;
+}
+
+
+.corpo-projeto {
+    margin-top: 89px;
+    display: flex;
+    flex-direction: row;
+    gap: 108px;
+}
+
+.contest-left {
+    width: 750px;
+}
+
+.contest-rigth {
+    width: 750px;
+}
+
+.contest-left h1 {
+    font-size: 72px;
+    font-weight: 700;
+}
+
+.contador-numeros {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+/* Estilização do toggle */
+.toggle-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--content-primary);
+}
+
+.toggle {
+    position: relative;
+    width: 50px;
+    height: 28px;
+}
+
+.toggle input {
+    display: none;
+    /* Oculta o checkbox padrão */
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--gradient-background);
+    /* Roxo claro */
+    border-radius: 34px;
+    transition: 0.3s;
+}
+
+.slider:before {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 4px;
+    background-color: var(--content-primary);
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+/* Quando estiver marcado (ativado) */
+input:checked+.slider {
+    background-color: #b58aff;
+    /* Um roxo mais escuro */
+}
+
+input:checked+.slider:before {
+    transform: translateX(22px);
+}
+
+.divInput{
+    text-align: center;
+}
+
+.number{
+    font-size: xx-large;
+    font-weight: 700;
+    width: 100px;
+    background-color: var(--background-secondary);
+    border: none;
+    color: var(--content-primary);
+    text-align: center;
+    margin-bottom: 35px;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+input[type="number"]::placeholder {
+    color: var(--content-primary);
+    opacity: 1;
+    font-weight: bold;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield; /* Para Firefox */
+}
+
+
+.button-sort{
+    margin-top: 40px;
+    width: 100%;
+    height: 56px;
+    border-radius: 8px;
+    font-weight: 700;
+    background-color: var(--background-tertiary);
+    border: none;
+}
+
+.questions{
+    margin-bottom: 36px;
+    font-size: 18px;
+
+}
+
+.contentTitle{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    height: 100%;
+    align-items: baseline;
+}
+
+.contentQuestions{
+    align-items: end;
+}
+
+.imgQuestions{
+    height: 32px;
+}
+
+.sub-title {
+    color: var(--content-brand);
+}
+
+.context {
+    color: var(--content-secondary);
+}
+
+.itemLista {
+    text-decoration: none;
+    list-style: none;
+    color: var(--accent-pink);
+    font-size: 4rem;
+    margin: 18px 22px;
+
+    text-align: center;
+    margin: 0 auto;
+}
+
+.desativada {
+    display: none;
+}
+
+ul{
+    display: flex;
+    flex-direction: row;
+}
+
+.resultado{
+    width: 700px;
+}
+
+.button-sort {
+    display: flex;
+    align-items: center; /* Alinha verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    gap: 8px; /* Espaço entre o texto e a imagem */
+    padding: 10px 20px;
+    border: none;
+    background-color: var(--background-tertiary);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.button-sort img {
+    width: 20px; /* Ajuste o tamanho da imagem */
+    height: auto;
+}
+
+.divResultado{
+    text-align: center;
+    margin: 0 auto;
+}
+
+.divResultado h3{
+    font-size: 30px;
+}
+.divResultado p{
+    font-size: 20px;
+}

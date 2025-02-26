@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sorteador de números</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <div class="logo-projeto"> <img src="./img/Frame.png" alt="">
+    <h3>NUMBERS</h3>
+  </div>
+  <form class="corpo-projeto">
+    <div class="contest-left"> <label class="tytle-login">ONLINE - GRATUITO</label>
+      <h1>SORTEADOR DE NÚMEROS</h1>
+      <div class="questions">
+        <div class="contentTitle"> <img class="imgQuestions" src="./img/imgContato.png">
+          <div class="contentQuestions">
+            <h3 class="sub-title">Como funciona o sorteador de números?</h3>
+            <P class="context"> O sorteador utiliza um algoritmo de geração aleatória para criar números dentro do
+              intervalo especificado pelo usuário. </P>
+          </div>
+        </div>
+        <div class="contentTitle"> <img class="imgQuestions" src="./img/imgContato.png">
+          <div class="contentQuestions">
+            <h3 class="sub-title">Posso escolher o intervalo dos números?</h3>
+            <P class="context"> Sim, você pode definir os valores mínimo e máximo para o intervalo dos números
+              sorteados. </P>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="contest-rigth" id="contest-rigth">
+      <h3>QUERO SORTEAR:</h3>
+      <P class="context">Defina o intervalo e a quantidade de números, clique em "Sortear" e veja os resultados na
+        tela. É rápido e fácil!</P>
+      <div class="contador-numeros">
+        <div class="divInput">
+          <h4>NÚMEROS</h4> <input type="number" placeholder=" 2 " class="number" id="numero-repeticao" required>
+        </div>
+        <div class="divInput">
+          <h4>DE</h4> <input type="number" placeholder=" 1 " class="number" id="numero-inicial" required>
+        </div>
+        <div class="divInput">
+          <h4>ATÉ</h4> <input type="number" placeholder=" 100 " class="number" id="numero-final" required>
+        </div>
+      </div> <label class="toggle-container">
+        <div class="toggle"> <input type="checkbox" id="toggleCheckbox"> <span class="slider"></span> </div> Não
+        repetir número
+      </label> <button class="button-sort">SORTEAR &nbsp;&nbsp;→</button>
+    </div>
+    <div class="resultado desativada" id="resultado">
+      <div id="divResultado" class="divResultado">
+        <h3>Resultado do sorteio</h3>
+        <p>1º resultado</p>
+        <div class="resultadoSort" id="resultadoSort"></div>
+      </div> <button class="button-sort">SORTEAR &nbsp;&nbsp;<img src="./img/iconReteste.svg" alt=""></button>
+    </div>
+    <ul> </ul>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>
